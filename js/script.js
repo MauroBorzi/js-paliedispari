@@ -30,18 +30,14 @@ console.log(`-----Pari e Dispari-----`)
 const userEvenOdd = prompt(`Scegli tra pari e dispari`)
 const userNumber = parseInt(prompt(`Scegli un numero tra 1 e 5`))
 const pcNumber = Math.floor(Math.random() * 5) + 1
-let even = `pari`
-let odd = `dispari`
-
-console.log(userEvenOdd, userNumber, pcNumber)
 
 function somma(){
   const sum = userNumber + pcNumber
 if(sum % 2 === 0){
-console.log(`la somma è ${even}`)
+console.log(`la somma di ${userNumber} più ${pcNumber} è ${sum}.Quindi pari`)
 }
 else{
-  console.log(`la somma è ${odd}`)
+  console.log(`la somma di ${userNumber} più ${pcNumber} è ${sum}.Quindi dispari`)
 }
 }
 
