@@ -1,26 +1,26 @@
-// console.log(`-----Pali-----`)
+console.log(`-----Pali-----`)
 
-// // definizione variabili
-// const userWord = prompt(`Inserisci una parola`)
-// console.log(`Parola inserita: '${userWord}'`)
+// definizione variabili
+const userWord = prompt(`Inserisci una parola`)
+console.log(`Parola inserita: '${userWord}'`)
 
-// const reverseString = reverseStrings(userWord)
+const reverseString = reverseStrings(userWord)
 
 
-// // funzione per capovolgere la parola
-// function reverseStrings(text) {
-//   return text.split('').reverse().join('')
-// }
+// funzione per capovolgere la parola
+function reverseStrings(text) {
+  return text.split('').reverse().join('')
+}
 
-// console.log(`Parola capovolta: '${reverseString}'`)
+console.log(`Parola capovolta: '${reverseString}'`)
 
-// // definiamo quando una parola è palindroma
-// if(userWord === reverseString){
-//   console.log(`La parola '${userWord}' è uguale alla parola '${reverseString}'. Quindi la parola scelta è palindroma.`)
-// }
-// else{
-//   console.log(`La parola '${userWord}' è diversa dalla parola '${reverseString}'. Quindi la parola scelta non è palindroma.`)
-// }
+// definiamo quando una parola è palindroma
+if(userWord === reverseString){
+   console.log(`La parola '${userWord}' è uguale alla parola '${reverseString}'. Quindi la parola scelta è palindroma.`)
+}
+else{
+   console.log(`La parola '${userWord}' è diversa dalla parola '${reverseString}'. Quindi la parola scelta non è palindroma.`)
+}
 
 
 
@@ -30,14 +30,17 @@ console.log(`-----Pari e Dispari-----`)
 const userEvenOdd = prompt(`Scegli tra pari e dispari`)
 const userNumber = parseInt(prompt(`Scegli un numero tra 1 e 5`))
 const pcNumber = Math.floor(Math.random() * 5) + 1
+const sum = userNumber + pcNumber
+const userEvenWin = sum % 2 === 0 && userEvenOdd === `pari`
+const userOddWin = sum % 2 !==0 && userEvenOdd === `dispari`
 
+// creo una funzione per verificare che la somma dei due valori sia pari o dispari
 function somma(){
-  const sum = userNumber + pcNumber
-if(sum % 2 === 0){
-console.log(`la somma di ${userNumber} più ${pcNumber} è ${sum}.Quindi pari`)
+if(userEvenWin||userOddWin){
+console.log(`Valore inserito '${userEvenOdd}'.La somma di ${userNumber} più ${pcNumber} è ${sum}.Quindi hai vinto`)
 }
 else{
-  console.log(`la somma di ${userNumber} più ${pcNumber} è ${sum}.Quindi dispari`)
+  console.log(`Valore inserito '${userEvenOdd}'.La somma di ${userNumber} più ${pcNumber} è ${sum}.Quindi Pc vince`)
 }
 }
 
