@@ -1,6 +1,8 @@
+console.log(`-----Pali-----`)
+
 // definizione variabili
 const userWord = prompt(`Inserisci una parola`)
-console.log(userWord)
+console.log(`Parola inserita: '${userWord}'`)
 
 const reverseString = reverseStrings(userWord)
 
@@ -10,7 +12,7 @@ function reverseStrings(text) {
   return text.split('').reverse().join('')
 }
 
-console.log(reverseString)
+console.log(`Parola capovolta: '${reverseString}'`)
 
 // definiamo quando una parola è palindroma
 if(userWord === reverseString){
